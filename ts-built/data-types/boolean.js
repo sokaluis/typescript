@@ -1,3 +1,4 @@
+"use strict";
 var esSuperman = true;
 var esBatman;
 var esAquaman = false;
