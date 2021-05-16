@@ -7,4 +7,4 @@ var Volumen;
 })(Volumen || (Volumen = {}));
 ;
 var audio = Volumen.min;
-console.log(Audio);
+console.log(audio);

@@ -6,4 +6,4 @@ enum Volumen {
 
 let audio: number = Volumen.min;
 
-console.log( Audio );
+console.log( audio );
