@@ -1,5 +1,105 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 console.log('Hola Mundo!!');
+var HeroreAvenger = (function () {
+    function HeroreAvenger(name, team, realName) {
+        this.name = "Sin nombre";
+        this.name = name;
+        this.team = team;
+        this.realName = realName;
+    }
+    HeroreAvenger.prototype.bio = function () {
+        var mensaje = this.name + " " + this.realName + " " + this.team;
+        console.log(mensaje);
+    };
+    HeroreAvenger.prototype.changePublicTeam = function (newTeam) {
+        return this.changeTeam(newTeam);
+    };
+    HeroreAvenger.prototype.changeTeam = function (newTeam) {
+        if (newTeam === this.team) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    return HeroreAvenger;
+}());
+var antman = new HeroreAvenger("Antman", "Cap", "Scott Lang");
+antman.name = "Nick Fury";
+antman.bio();
+antman.changePublicTeam('Cap');
+console.log(antman);
+var MasterAvenger = (function () {
+    function MasterAvenger(name, realName) {
+        this.name = name;
+        this.realName = realName;
+        console.log("Avenger Constructor llamado");
+    }
+    MasterAvenger.prototype.getNameAvenger = function () {
+        console.log("Get name Avenger (protected)");
+        return this.name;
+    };
+    return MasterAvenger;
+}());
+var Xmen = (function (_super) {
+    __extends(Xmen, _super);
+    function Xmen(a, b) {
+        var _this = this;
+        console.log("Xmen Constructor llamado");
+        _this = _super.call(this, a, b) || this;
+        return _this;
+    }
+    Xmen.prototype.getXmenName = function () {
+        console.log("Get name xmen (public)");
+        return _super.prototype.getNameAvenger.call(this);
+    };
+    return Xmen;
+}(MasterAvenger));
+var ciclope = new Xmen("Ciclope", "Scott");
+console.log(ciclope.getXmenName());
+var GetAvenger = (function () {
+    function GetAvenger(name) {
+        this._name = name;
+    }
+    Object.defineProperty(GetAvenger.prototype, "name", {
+        get: function () {
+            if (this._name) {
+                return this._name;
+            }
+            else {
+                return "No tiene nombre el Avenger";
+            }
+        },
+        set: function (name) {
+            if (name.length <= 3) {
+                throw new Error("Esto esta mal");
+            }
+            this._name = name;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return GetAvenger;
+}());
+var ciclopes = new GetAvenger("Wolverine");
+console.log(ciclopes.name);
+ciclopes.name = "Lee";
+console.log(ciclopes.name);
 var vengador = 123;
 var existe;
 var derrotas;
@@ -247,6 +347,78 @@ var captain_america = {
     }
 };
 captain_america.order();
+var AvengerModel = (function () {
+    function AvengerModel(nombre, poder) {
+        this.nombre = nombre;
+        this.poder = poder;
+    }
+    return AvengerModel;
+}());
+var AvengerVolador = (function (_super) {
+    __extends(AvengerVolador, _super);
+    function AvengerVolador(nombre, poder) {
+        var _this = _super.call(this, nombre, poder) || this;
+        _this.volar = true;
+        return _this;
+    }
+    return AvengerVolador;
+}(AvengerModel));
+var hulk = new AvengerModel('Hulk', "Fuerza");
+var falcon = new AvengerVolador('Falcon', "Vuela");
+console.log(hulk);
+console.log(falcon);
+var avengers1 = {
+    ironman: "Robert Downey Jr",
+    nick: "Samuel Jackson",
+    vision: "Paul Bettany",
+};
+var warmachine = avengers1.ironman, nick = avengers1.nick, vision = avengers1.vision;
+var avengers2 = ["Robert Downey Jr", "Samuel Jackson", "Paul Bettany"];
+var avenger1 = avengers2[0];
+var avenger2 = avengers2[1];
+var avenger3 = avengers2[2];
+console.log(avenger1);
+console.log(avenger2);
+console.log(avenger3);
+var HEROE = "Spiderman";
+var spiderman = "Peter Parker";
+var venom = "Eddie Brock";
+var versiones = ["Spider-Man 2099", "Spider-Girl", "Ultimate Spider-Man"];
+var spiderman2099 = versiones[0], spidergirl = versiones[1], ultimate = versiones[2];
+var villanos12 = {
+    venom: "Eddie Brock",
+    carnage: "Cletus Kasady",
+    sandman: "William Baker"
+};
+var spidermanBlack = villanos12.venom, carnage = villanos12.carnage, sandman = villanos12.sandman;
+for (var i in versiones) {
+    console.log(versiones[i]);
+}
+for (var _i = 0, versiones_1 = versiones; _i < versiones_1.length; _i++) {
+    var version = versiones_1[_i];
+    console.log(version);
+}
+var iroman = {
+    name: "Tony",
+    weapon: "Armorsuit"
+};
+var thor = {
+    name: "Chris",
+    weapon: "Martillo"
+};
+var capitan = {
+    name: "Capitan America",
+    weapon: "Shield"
+};
+var avengersArray = [iroman, thor, capitan];
+for (var i in avengersArray) {
+    var avenger = avengersArray[i];
+    console.log(avenger.name + " " + avenger.weapon);
+}
+for (var _i = 0, avengersArray_1 = avengersArray; _i < avengersArray_1.length; _i++) {
+    var avenger = avengersArray_1[_i];
+    console.log(avenger.name, avenger.weapon);
+}
 var name1 = "Bruce";
 var name2 = "Ricardo";
 function getNames() {
