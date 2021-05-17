@@ -7,8 +7,8 @@ var flash = {
         return this.name;
     },
 };
-flash = {
-    name: "Superman",
+var superman = {
+    name: "Clark Kent",
     age: 500,
     powers: ["Fly"],
     getName: function () {

@@ -1,10 +1,11 @@
-
-let flash: {
+type Heroe = {
 	name: string,
 	age: number,
 	powers: string[],
 	getName: () => string,
-} = {
+}
+
+let flash: Heroe = {
 	name: "Barry Allen",
 	age: 25,
 	powers: ["Run", "Time travel"],
@@ -13,11 +14,11 @@ let flash: {
 	},
 };
 
-flash = {
-	name: "Superman",
+let superman: Heroe = {
+	name: "Clark Kent",
 	age: 500,
 	powers: ["Fly"],
 	getName() {
 		return this.name;
 	},
-}
+};
