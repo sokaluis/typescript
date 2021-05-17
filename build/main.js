@@ -229,6 +229,24 @@ var apocalipsis = {
 var mystique;
 mystique = charles;
 mystique = apocalipsis;
+function sumar1(a, b) {
+    return a + b;
+}
+var sumar2 = function (a, b) { return a + b; };
+function giveOrder(order) {
+    return "Hulk " + order;
+}
+console.log(giveOrder("Smaaash!!!!"));
+var giveOrder2 = function (order) { return "Hulk " + order; };
+console.log(giveOrder2("Smaaash!!!!"));
+var captain_america = {
+    name: "Hulk",
+    order: function () {
+        var _this = this;
+        setTimeout(function () { return console.log(_this.name + " smaaaash!!!"); }, 1000);
+    }
+};
+captain_america.order();
 var name1 = "Bruce";
 var name2 = "Ricardo";
 function getNames() {
