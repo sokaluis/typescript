@@ -15,3 +15,17 @@ var superman = {
         return this.name;
     },
 };
+// Mutliple type definitios
+var villano = "Darkside";
+// Verify data types
+var cosa = function () {
+    return null;
+};
+console.log(typeof cosa);
+var cosa2 = "Hola";
+if (typeof cosa2 === 'string') {
+    console.log("Cosa es un string");
+}
+else {
+    console.log("Este código no contiene un string");
+}

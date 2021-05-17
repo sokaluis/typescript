@@ -22,3 +22,19 @@ let superman: Heroe = {
 		return this.name;
 	},
 };
+
+// Mutliple type definitios
+let villano: string | number | Heroe = "Darkside";
+
+// Verify data types
+let cosa: any = function () {
+	return null;
+}
+console.log(typeof cosa);
+
+let cosa2: any = "Hola";
+if (typeof cosa2 === 'string') {
+	console.log("Cosa es un string");
+} else {
+	console.log("Este código no contiene un string");
+}
