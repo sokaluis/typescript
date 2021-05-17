@@ -15,6 +15,22 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 console.log('Hola Mundo!!');
+var XmenModel = (function () {
+    function XmenModel(name, realName) {
+        this.name = name;
+        this.realName = realName;
+    }
+    return XmenModel;
+}());
+var XmenCo = (function (_super) {
+    __extends(XmenCo, _super);
+    function XmenCo() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return XmenCo;
+}(XmenModel));
+var wolverine3 = new XmenCo("Wolverine", "Logan");
+console.log(wolverine3);
 var HeroreAvenger = (function () {
     function HeroreAvenger(name, team, realName) {
         this.name = "Sin nombre";
