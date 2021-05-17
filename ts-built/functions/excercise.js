@@ -1,5 +1,4 @@
 "use strict";
-// Funciones Básicas
 function sumar(a, b) {
     return a + b;
 }
@@ -8,7 +7,6 @@ var contar = function (heroes) {
 };
 var superHeroes = ["Flash", "Arrow", "Superman", "Linterna Verde"];
 contar(superHeroes);
-//Parametros por defecto
 function llamarBatman(llamar) {
     if (llamar === void 0) { llamar = false; }
     if (llamar) {
@@ -16,7 +14,6 @@ function llamarBatman(llamar) {
     }
 }
 llamarBatman();
-// Rest?
 function unirheroes(nombre) {
     var personas = [];
     for (var _i = 1; _i < arguments.length; _i++) {
@@ -32,6 +29,5 @@ function noHaceNada(numero, texto, booleano, arreglo) {
         arreglo: arreglo,
     };
 }
-// Crear el tipo de funcion que acepte la funcion "noHaceNada"
 var noHaceNadaTampoco;
 //# sourceMappingURL=excercise.js.map

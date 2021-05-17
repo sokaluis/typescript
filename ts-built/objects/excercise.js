@@ -1,5 +1,4 @@
 "use strict";
-// Objetos
 var batimovil = {
     carroceria: "Negra",
     modelo: "6x6",
@@ -36,7 +35,6 @@ var apocalipsis = {
     lider: true,
     miembros: ["Magneto", "Tormenta", "Psylocke", "Angel"]
 };
-// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
 var mystique;
 mystique = charles;
 mystique = apocalipsis;

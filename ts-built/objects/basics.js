@@ -15,9 +15,7 @@ var superman = {
         return this.name;
     },
 };
-// Mutliple type definitios
 var villano = "Darkside";
-// Verify data types
 var cosa = function () {
     return null;
 };
