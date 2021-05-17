@@ -2,3 +2,4 @@
 var heroes = ["Dr Strange", 100, true];
 heroes.push(true);
 console.log(heroes);
+//# sourceMappingURL=tuples.js.map

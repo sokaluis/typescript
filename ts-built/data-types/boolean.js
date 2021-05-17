@@ -12,3 +12,4 @@ function convertirClark() {
     return true;
 }
 esSuperman = convertirClark();
+//# sourceMappingURL=boolean.js.map

@@ -10,3 +10,4 @@ vengador = true;
 console.log(vengador);
 console.log(existe);
 console.log(derrotas);
+//# sourceMappingURL=any.js.map

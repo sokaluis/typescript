@@ -8,3 +8,4 @@ var signal_batman = function () {
 };
 console.log(hereo_name());
 console.log(signal_batman());
+//# sourceMappingURL=basic.js.map

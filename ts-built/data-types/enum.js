@@ -8,3 +8,4 @@ var Volumen;
 ;
 var audio = Volumen.min;
 console.log(audio);
+//# sourceMappingURL=enum.js.map

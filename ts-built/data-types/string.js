@@ -9,3 +9,4 @@ var concatenar = "Los héroes son:" + batman + ', ' + linternaVerde + volcanNegr
 var concat = "Los h\u00E9roes son: " + batman + ", " + linternaVerde + ", " + volcanNegro;
 console.log(concatenar);
 console.log(concat);
+//# sourceMappingURL=string.js.map

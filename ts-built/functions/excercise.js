@@ -34,3 +34,4 @@ function noHaceNada(numero, texto, booleano, arreglo) {
 }
 // Crear el tipo de funcion que acepte la funcion "noHaceNada"
 var noHaceNadaTampoco;
+//# sourceMappingURL=excercise.js.map

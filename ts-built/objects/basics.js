@@ -29,3 +29,4 @@ if (typeof cosa2 === 'string') {
 else {
     console.log("Este código no contiene un string");
 }
+//# sourceMappingURL=basics.js.map

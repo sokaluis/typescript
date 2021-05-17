@@ -31,3 +31,4 @@ var nombre = nombreOpcional("Clark", "Kent");
 var apiNames = nombreRest("Clark", "Kent", "Otros", "Casas");
 console.log(nombreCompleto);
 console.log(nombre);
+//# sourceMappingURL=parameters.js.map

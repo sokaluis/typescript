@@ -23,3 +23,4 @@ myFuction2 = plus;
 console.log(myFuction2(10, 20));
 myFuction3 = salvarMundo;
 myFuction3();
+//# sourceMappingURL=types.js.map
