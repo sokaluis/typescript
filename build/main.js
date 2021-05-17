@@ -229,4 +229,37 @@ var apocalipsis = {
 var mystique;
 mystique = charles;
 mystique = apocalipsis;
+var nombre1 = "Maria";
+if (true) {
+    var nombre1 = "Bruce";
+}
+if (false) {
+    var nombre2 = "Bruce";
+}
+console.log(nombre1);
+var nombre4 = "Maria";
+var nombre5 = "Maria";
+if (true) {
+    var nombre4_1 = "Bruce";
+    nombre5 = "Bruce";
+}
+console.log(nombre4);
+console.log(nombre5);
+var OPCIONES = "Activo";
+if (true) {
+    var OPCIONES_1 = "Desactivo";
+}
+console.log(OPCIONES);
+for (var _i = 0, _a = [1, 2, 3, 4, 5, 6, 7, 8, 9]; _i < _a.length; _i++) {
+    var I = _a[_i];
+    console.log(I);
+}
+var AUDIO = {
+    status: true,
+    audio: 10,
+    last: "main",
+};
+AUDIO.status = false;
+AUDIO.audio = 1;
+console.log(AUDIO);
 //# sourceMappingURL=main.js.map
