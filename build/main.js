@@ -229,6 +229,12 @@ var apocalipsis = {
 var mystique;
 mystique = charles;
 mystique = apocalipsis;
+var name1 = "Bruce";
+var name2 = "Ricardo";
+function getNames() {
+    return name1 + " " + name2;
+}
+var menssage = "\n1. Linea normal\n2. Robin es: " + name2 + "\n3. Hola " + name1 + "\n4. Los nombres son: " + getNames() + "\n5. " + (name1.length + name2.length) + "\n";
 var nombre1 = "Maria";
 if (true) {
     var nombre1 = "Bruce";
