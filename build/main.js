@@ -116,6 +116,20 @@ var ciclopes = new GetAvenger("Wolverine");
 console.log(ciclopes.name);
 ciclopes.name = "Lee";
 console.log(ciclopes.name);
+var RealApocalipsis = (function () {
+    function RealApocalipsis(name) {
+        this.name = name;
+    }
+    RealApocalipsis.llamarApocalipsis = function () {
+        if (!RealApocalipsis.instance) {
+            RealApocalipsis.instance = new RealApocalipsis("Soy Apocalipsis... el único");
+        }
+        return RealApocalipsis.instance;
+    };
+    return RealApocalipsis;
+}());
+var real = RealApocalipsis.instance;
+console.log(real);
 var StaticXmen = (function () {
     function StaticXmen() {
     }
