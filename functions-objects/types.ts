@@ -1,4 +1,4 @@
-function sumar(a: number, b: number): number {
+function plus(a: number, b: number): number {
     return a + b;
 }
 
@@ -12,11 +12,12 @@ function salvarMundo(): void {
 
 let myFuction;
 let myFuction2: (a: number, b: number) => number;
+let myFuction3: () => void;
 
 myFuction = 10;
 console.log(myFuction);
 
-myFuction = sumar;
+myFuction = plus;
 console.log(myFuction(5, 5));
 
 myFuction = saludar;
@@ -25,5 +26,8 @@ console.log(myFuction("Luis"));
 myFuction = salvarMundo;
 myFuction();
 
-myFuction2 = sumar;
+myFuction2 = plus;
 console.log(myFuction2(10, 20));
+
+myFuction3 = salvarMundo;
+myFuction3();
