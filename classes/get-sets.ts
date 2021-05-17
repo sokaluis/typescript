@@ -4,7 +4,7 @@ class GetAvenger {
     this._name = name;
   }
 
-  get name(): string {
+  get name(): string { // Getter allows you get a property ordered
     if (this._name) {
       return this._name;
     } else {
@@ -12,7 +12,7 @@ class GetAvenger {
     }
   }
 
-  set name(name: string) {
+  set name(name: string) { // Setter allows you set a property ordered
     if (name.length <= 3) {
       throw new Error("Esto esta mal");
     }

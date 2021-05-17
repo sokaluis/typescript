@@ -1,5 +1,5 @@
 class MasterAvenger {
-  constructor(public name: string, private realName: string,) {
+  constructor(public name: string, private realName: string,) { // You are able to declare public, private or protected variables in the parameter
     console.log("Avenger Constructor llamado");
   }
   protected getNameAvenger(): string {
@@ -11,7 +11,7 @@ class MasterAvenger {
 class Xmen extends MasterAvenger {
   constructor(a: string, b: string) {
     console.log("Xmen Constructor llamado");
-    super(a, b);
+    super(a, b); // Always have to create a super method in the constructor of extended Class
   }
   public getXmenName(): string {
     console.log("Get name xmen (public)");
