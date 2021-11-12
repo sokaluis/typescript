@@ -1,5 +1,6 @@
 class MasterAvenger {
-  constructor(public name: string, private realName: string,) { // You are able to declare public, private or protected variables in the parameter
+  constructor(public name: string, private realName: string) {
+    // You are able to declare public, private or protected variables in the parameter
     console.log("Avenger Constructor llamado");
   }
   protected getNameAvenger(): string {

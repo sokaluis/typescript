@@ -12,8 +12,10 @@ class HeroreAvenger {
   }
 
   public bio(): void {
-    let mensaje = `${this.name} ${this.realName} ${this.team}`
+    let mensaje = `${this.name} ${this.realName} ${this.team}`;
     console.log(mensaje);
+    console.log(this.canFight);
+    console.log(this.wins);
   }
 
   public changePublicTeam(newTeam: string): boolean {
@@ -27,13 +29,12 @@ class HeroreAvenger {
       return true;
     }
   }
-
 }
 
 let antman = new HeroreAvenger("Antman", "Cap", "Scott Lang");
 
-antman.name = "Nick Fury";  // Only are able to access to this property because it's public 
+antman.name = "Nick Fury"; // Only are able to access to this property because it's public
 antman.bio();
-antman.changePublicTeam('Cap');
+antman.changePublicTeam("Cap");
 
 console.log(antman);

@@ -41,6 +41,8 @@ var HeroreAvenger = (function () {
     HeroreAvenger.prototype.bio = function () {
         var mensaje = this.name + " " + this.realName + " " + this.team;
         console.log(mensaje);
+        console.log(this.canFight);
+        console.log(this.wins);
     };
     HeroreAvenger.prototype.changePublicTeam = function (newTeam) {
         return this.changeTeam(newTeam);
@@ -58,7 +60,7 @@ var HeroreAvenger = (function () {
 var antman = new HeroreAvenger("Antman", "Cap", "Scott Lang");
 antman.name = "Nick Fury";
 antman.bio();
-antman.changePublicTeam('Cap');
+antman.changePublicTeam("Cap");
 console.log(antman);
 var MasterAvenger = (function () {
     function MasterAvenger(name, realName) {
@@ -88,6 +90,32 @@ var Xmen = (function (_super) {
 }(MasterAvenger));
 var ciclope = new Xmen("Ciclope", "Scott");
 console.log(ciclope.getXmenName());
+var AvengerExtend = (function () {
+    function AvengerExtend(name, realName) {
+        this.name = name;
+        this.realName = realName;
+        console.log("AvengerExtend call");
+    }
+    AvengerExtend.prototype.getFullName = function () {
+        console.log(this.name + " es " + this.realName);
+    };
+    return AvengerExtend;
+}());
+var XmenExtend = (function (_super) {
+    __extends(XmenExtend, _super);
+    function XmenExtend(isMutand, name, realName) {
+        var _this = _super.call(this, name, realName) || this;
+        _this.isMutand = isMutand;
+        console.log("XmenExtend extends AvengerExtend call");
+        return _this;
+    }
+    XmenExtend.prototype.getXmenName = function () {
+        _super.prototype.getFullName.call(this);
+    };
+    return XmenExtend;
+}(AvengerExtend));
+var xmen = new XmenExtend(false, "Logan", "Wolverine");
+xmen.getXmenName();
 var GetAvenger = (function () {
     function GetAvenger(name) {
         this._name = name;
