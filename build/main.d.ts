@@ -53,8 +53,10 @@ declare class RealApocalipsis {
     static instance: RealApocalipsis;
     private constructor();
     static llamarApocalipsis(): RealApocalipsis;
+    changeName(newName: string): void;
 }
 declare let real: RealApocalipsis;
+declare let apocalips1: void;
 declare class StaticXmen {
     static xmenName: string;
     constructor();

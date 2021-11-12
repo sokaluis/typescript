@@ -154,9 +154,13 @@ var RealApocalipsis = (function () {
         }
         return RealApocalipsis.instance;
     };
+    RealApocalipsis.prototype.changeName = function (newName) {
+        this.name = newName;
+    };
     return RealApocalipsis;
 }());
 var real = RealApocalipsis.instance;
+var apocalips1 = real.changeName("Logan");
 console.log(real);
 var StaticXmen = (function () {
     function StaticXmen() {
