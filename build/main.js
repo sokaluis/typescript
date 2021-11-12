@@ -599,5 +599,5 @@ var AUDIO = {
 AUDIO.status = false;
 AUDIO.audio = 1;
 console.log(AUDIO);
-console.log('Hola Mundo!');
+console.log("Hola Mundo!!!");
 //# sourceMappingURL=main.js.map
