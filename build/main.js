@@ -338,6 +338,55 @@ myFuction2 = plus;
 console.log(myFuction2(10, 20));
 myFuction3 = salvarMundo;
 myFuction3();
+(function () {
+    var Avenger45 = {
+        age: 54,
+        getName: function () {
+            console.log("");
+            return this.name;
+        },
+        name: "Logam",
+        powers: [1, 23, 4, 5],
+    };
+    console.log(Avenger45);
+})();
+(function () {
+    var MutantX = (function () {
+        function MutantX() {
+            this.age = 10;
+            this.name = "Xmen";
+            this.realName = "Real Xmen";
+        }
+        MutantX.prototype.mutanPower = function (id) {
+            return this.age + " " + id + " " + this.realName;
+        };
+        return MutantX;
+    }());
+    var mutan = new MutantX();
+    mutan.age = 54;
+    mutan.mutanPower(123);
+})();
+(function () {
+    var client = {
+        name: "Luis",
+        age: 29,
+        address: {
+            city: "Buenos Aires",
+            id: 12124134132,
+            zip: "11111121123",
+        },
+        getFullAdress: function () {
+            return this.address.city;
+        },
+    };
+    console.log(client);
+})();
+(function () {
+    var addTwoNumbersFunc;
+    addTwoNumbersFunc = function (a, b) {
+        return a + b;
+    };
+})();
 var flash = {
     name: "Barry Allen",
     age: 25,
