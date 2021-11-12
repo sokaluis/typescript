@@ -122,6 +122,10 @@ declare function salvarMundo(): void;
 declare let myFuction: any;
 declare let myFuction2: (a: number, b: number) => number;
 declare let myFuction3: () => void;
+declare namespace Validation {
+    const validateText: (text: string) => boolean;
+    const validateDate: (myDate: Date) => boolean;
+}
 declare type Heroe = {
     name: string;
     age: number;

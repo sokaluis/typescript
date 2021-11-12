@@ -387,6 +387,22 @@ myFuction3();
         return a + b;
     };
 })();
+var Validation;
+(function (Validation) {
+    Validation.validateText = function (text) {
+        if (text.length > 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+    Validation.validateDate = function (myDate) {
+        return isNaN(myDate.valueOf()) ? false : true;
+    };
+})(Validation || (Validation = {}));
+Validation.validateText("Fernando");
+Validation.validateDate(new Date());
 var flash = {
     name: "Barry Allen",
     age: 25,
