@@ -231,6 +231,13 @@ declare module "ts-node/generics/generics" {
     export const genericFunctArrow: <T>(argument: T) => T;
 }
 declare module "ts-node/backup/generics" { }
+declare module "ts-node/decorators/PokemonClass" {
+    export class PokemonClass {
+        name: string;
+        publicAPI: string;
+        constructor(name: string);
+    }
+}
 declare module "ts-node/interfaces/pokemon" {
     export interface PokemonResponse {
         abilities: Ability[];

@@ -675,19 +675,37 @@ System.register("ts-node/backup/generics", ["ts-node/generics/generics"], functi
         }
     };
 });
-System.register("ts-node/interfaces/pokemon", [], function (exports_3, context_3) {
+System.register("ts-node/decorators/PokemonClass", [], function (exports_3, context_3) {
     "use strict";
+    var PokemonClass;
     var __moduleName = context_3 && context_3.id;
+    return {
+        setters: [],
+        execute: function () {
+            PokemonClass = (function () {
+                function PokemonClass(name) {
+                    this.name = name;
+                    this.publicAPI = "https://pokeapi.co/api/v2/";
+                }
+                return PokemonClass;
+            }());
+            exports_3("PokemonClass", PokemonClass);
+        }
+    };
+});
+System.register("ts-node/interfaces/pokemon", [], function (exports_4, context_4) {
+    "use strict";
+    var __moduleName = context_4 && context_4.id;
     return {
         setters: [],
         execute: function () {
         }
     };
 });
-System.register("ts-node/generics/getPokemons", ["axios"], function (exports_4, context_4) {
+System.register("ts-node/generics/getPokemons", ["axios"], function (exports_5, context_5) {
     "use strict";
     var axios_1, getPokemons;
-    var __moduleName = context_4 && context_4.id;
+    var __moduleName = context_5 && context_5.id;
     return {
         setters: [
             function (axios_1_1) {
@@ -695,7 +713,7 @@ System.register("ts-node/generics/getPokemons", ["axios"], function (exports_4, 
             }
         ],
         execute: function () {
-            exports_4("getPokemons", getPokemons = function (id) { return __awaiter(void 0, void 0, void 0, function () {
+            exports_5("getPokemons", getPokemons = function (id) { return __awaiter(void 0, void 0, void 0, function () {
                 var resp;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
@@ -710,16 +728,7 @@ System.register("ts-node/generics/getPokemons", ["axios"], function (exports_4, 
         }
     };
 });
-System.register("ts-node/interfaces/heroe", [], function (exports_5, context_5) {
-    "use strict";
-    var __moduleName = context_5 && context_5.id;
-    return {
-        setters: [],
-        execute: function () {
-        }
-    };
-});
-System.register("ts-node/interfaces/villain", [], function (exports_6, context_6) {
+System.register("ts-node/interfaces/heroe", [], function (exports_6, context_6) {
     "use strict";
     var __moduleName = context_6 && context_6.id;
     return {
@@ -728,7 +737,7 @@ System.register("ts-node/interfaces/villain", [], function (exports_6, context_6
         }
     };
 });
-System.register("ts-node/interfaces/index", [], function (exports_7, context_7) {
+System.register("ts-node/interfaces/villain", [], function (exports_7, context_7) {
     "use strict";
     var __moduleName = context_7 && context_7.id;
     return {
@@ -737,28 +746,35 @@ System.register("ts-node/interfaces/index", [], function (exports_7, context_7) 
         }
     };
 });
-System.register("ts-node/src/index", ["ts-node/generics/getPokemons"], function (exports_8, context_8) {
+System.register("ts-node/interfaces/index", [], function (exports_8, context_8) {
     "use strict";
-    var getPokemons_1;
     var __moduleName = context_8 && context_8.id;
     return {
-        setters: [
-            function (getPokemons_1_1) {
-                getPokemons_1 = getPokemons_1_1;
-            }
-        ],
+        setters: [],
         execute: function () {
-            getPokemons_1.getPokemons(4)
-                .then(function (resp) { return console.log(resp); })
-                .catch(function (err) { return console.error(err); });
-            console.log("getPokemons()", getPokemons_1.getPokemons(4));
         }
     };
 });
-System.register("ts-node/src/classes/Heroe", [], function (exports_9, context_9) {
+System.register("ts-node/src/index", ["ts-node/decorators/PokemonClass"], function (exports_9, context_9) {
+    "use strict";
+    var PokemonClass_1, charmander;
+    var __moduleName = context_9 && context_9.id;
+    return {
+        setters: [
+            function (PokemonClass_1_1) {
+                PokemonClass_1 = PokemonClass_1_1;
+            }
+        ],
+        execute: function () {
+            charmander = new PokemonClass_1.PokemonClass("Charmander");
+            console.log("charmander", charmander);
+        }
+    };
+});
+System.register("ts-node/src/classes/Heroe", [], function (exports_10, context_10) {
     "use strict";
     var Heroe;
-    var __moduleName = context_9 && context_9.id;
+    var __moduleName = context_10 && context_10.id;
     return {
         setters: [],
         execute: function () {
@@ -770,7 +786,7 @@ System.register("ts-node/src/classes/Heroe", [], function (exports_9, context_9)
                 }
                 return Heroe;
             }());
-            exports_9("Heroe", Heroe);
+            exports_10("Heroe", Heroe);
         }
     };
 });

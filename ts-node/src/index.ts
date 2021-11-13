@@ -1,7 +1,11 @@
-import { getPokemons } from "./../generics/getPokemons";
+import { PokemonClass } from "./decorators/PokemonClass";
 
-getPokemons(4)
-  .then((resp) => console.log(resp))
-  .catch((err) => console.error(err));
+const charmander = new PokemonClass("Charmander");
 
-console.log(`getPokemons()`, getPokemons(4));
+// (PokemonClass.prototype as any).customName = "Pikachu";
+
+// console.log(`charmander`, charmander.savePokemonToDB(50));
+
+// charmander.publicAPI = "luis"; // READONLY
+
+charmander.savePokemonToDB(50);
