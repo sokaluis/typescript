@@ -599,5 +599,40 @@ var AUDIO = {
 AUDIO.status = false;
 AUDIO.audio = 1;
 console.log(AUDIO);
-console.log("Hola Mundo!!!");
+System.register("ts-node/src/classes/Heroe", [], function (exports_1, context_1) {
+    "use strict";
+    var Heroe;
+    var __moduleName = context_1 && context_1.id;
+    return {
+        setters: [],
+        execute: function () {
+            Heroe = (function () {
+                function Heroe(name, powerID, age) {
+                    this.name = name;
+                    this.powerID = powerID;
+                    this.age = age;
+                }
+                return Heroe;
+            }());
+            exports_1("Heroe", Heroe);
+        }
+    };
+});
+System.register("ts-node/src/index", ["ts-node/src/classes/Heroe"], function (exports_2, context_2) {
+    "use strict";
+    var Heroe_1, IronMan;
+    var __moduleName = context_2 && context_2.id;
+    return {
+        setters: [
+            function (Heroe_1_1) {
+                Heroe_1 = Heroe_1_1;
+            }
+        ],
+        execute: function () {
+            console.log("Hola Mundo!!!");
+            IronMan = new Heroe_1.Heroe("Tony Stark", 1212412, 56);
+            console.log(IronMan);
+        }
+    };
+});
 //# sourceMappingURL=main.js.map

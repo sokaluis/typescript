@@ -225,4 +225,13 @@ declare const AUDIO: {
     audio: number;
     last: string;
 };
+declare module "ts-node/src/classes/Heroe" {
+    export class Heroe {
+        name: string;
+        powerID: number;
+        age: number;
+        constructor(name: string, powerID: number, age: number);
+    }
+}
+declare module "ts-node/src/index" { }
 //# sourceMappingURL=main.d.ts.map
