@@ -225,6 +225,28 @@ declare const AUDIO: {
     audio: number;
     last: string;
 };
+declare module "ts-node/generics/generics" {
+    export const printObject: (argument: any) => void;
+    export function genericFunct<T>(argument: T): T;
+    export const genericFunctArrow: <T>(argument: T) => T;
+}
+declare module "ts-node/backup/generics" { }
+declare module "ts-node/interfaces/heroe" {
+    export interface Heroe {
+        name: string;
+        realName: string;
+    }
+}
+declare module "ts-node/interfaces/villain" {
+    export interface Villain {
+        name: string;
+        dangerLVL: number;
+    }
+}
+declare module "ts-node/interfaces/index" {
+    export { Villain } from "ts-node/interfaces/villain";
+    export { Heroe } from "ts-node/interfaces/heroe";
+}
 declare module "ts-node/src/classes/Heroe" {
     export class Heroe {
         name: string;
@@ -233,5 +255,4 @@ declare module "ts-node/src/classes/Heroe" {
         constructor(name: string, powerID: number, age: number);
     }
 }
-declare module "ts-node/src/index" { }
 //# sourceMappingURL=main.d.ts.map

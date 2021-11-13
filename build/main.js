@@ -599,10 +599,77 @@ var AUDIO = {
 AUDIO.status = false;
 AUDIO.audio = 1;
 console.log(AUDIO);
-System.register("ts-node/src/classes/Heroe", [], function (exports_1, context_1) {
+System.register("ts-node/generics/generics", [], function (exports_1, context_1) {
+    "use strict";
+    var printObject, genericFunctArrow;
+    var __moduleName = context_1 && context_1.id;
+    function genericFunct(argument) {
+        return argument;
+    }
+    exports_1("genericFunct", genericFunct);
+    return {
+        setters: [],
+        execute: function () {
+            exports_1("printObject", printObject = function (argument) {
+                console.log(argument);
+            });
+            exports_1("genericFunctArrow", genericFunctArrow = function (argument) {
+                return argument;
+            });
+        }
+    };
+});
+System.register("ts-node/backup/generics", ["ts-node/generics/generics"], function (exports_2, context_2) {
+    "use strict";
+    var generics_1, deadpool;
+    var __moduleName = context_2 && context_2.id;
+    return {
+        setters: [
+            function (generics_1_1) {
+                generics_1 = generics_1_1;
+            }
+        ],
+        execute: function () {
+            deadpool = {
+                name: "Deadpool",
+                realName: "Wade Wilson",
+                dangerLVL: 130,
+            };
+            console.log(generics_1.genericFunctArrow(deadpool).realName);
+        }
+    };
+});
+System.register("ts-node/interfaces/heroe", [], function (exports_3, context_3) {
+    "use strict";
+    var __moduleName = context_3 && context_3.id;
+    return {
+        setters: [],
+        execute: function () {
+        }
+    };
+});
+System.register("ts-node/interfaces/villain", [], function (exports_4, context_4) {
+    "use strict";
+    var __moduleName = context_4 && context_4.id;
+    return {
+        setters: [],
+        execute: function () {
+        }
+    };
+});
+System.register("ts-node/interfaces/index", [], function (exports_5, context_5) {
+    "use strict";
+    var __moduleName = context_5 && context_5.id;
+    return {
+        setters: [],
+        execute: function () {
+        }
+    };
+});
+System.register("ts-node/src/classes/Heroe", [], function (exports_6, context_6) {
     "use strict";
     var Heroe;
-    var __moduleName = context_1 && context_1.id;
+    var __moduleName = context_6 && context_6.id;
     return {
         setters: [],
         execute: function () {
@@ -614,24 +681,7 @@ System.register("ts-node/src/classes/Heroe", [], function (exports_1, context_1)
                 }
                 return Heroe;
             }());
-            exports_1("Heroe", Heroe);
-        }
-    };
-});
-System.register("ts-node/src/index", ["ts-node/src/classes/Heroe"], function (exports_2, context_2) {
-    "use strict";
-    var Heroe_1, IronMan;
-    var __moduleName = context_2 && context_2.id;
-    return {
-        setters: [
-            function (Heroe_1_1) {
-                Heroe_1 = Heroe_1_1;
-            }
-        ],
-        execute: function () {
-            console.log("Hola Mundo!!!");
-            IronMan = new Heroe_1.Heroe("Tony Stark", 1212412, 56);
-            console.log(IronMan);
+            exports_6("Heroe", Heroe);
         }
     };
 });
